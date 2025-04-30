@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alinhamento vertical</title>
+  <style>
+    #container {
+      position: relative;
+      /*para centralizacao vertical o posicionamento deve ser relativo (todo box por padrao ja e relativo)*/
+
+      background-image: url(imagens/target001.png);
+      background-size: 100% 100%;
+      height: 94vh;
+      padding: 10px;
+      background-color: purple;
+
+    }
+
+    #conteudo {
+      position: absolute;
+      /* o que esta dentro do box (conteudo) deve conter o posicionamento absoluto */
+
+      background-image: url(imagens/target001.png);
+      background-size: 100% 100%;
+      height: 200px;
+      background-color: yellow;
+      width: 400px;
+
+      left: 50%;
+      top: 50%;
+/* configuracao que move o conteudo dentro do container para melhor alinhamento, considerando a posicao canto superior esquerdo*/
+
+transform: translate(-50%, -50%);
+
+
+
+/*PARA CENTRALIZAR UM CONTEUDO AO MEIO DA PAGINA PRECISO QUE O CONTAINER ESTEJA COM A POSICAO RELATIVA
+ E O CONTEUDO COM A POSICAO ABSOLUTA ASSIM PODENDO UTILIZAR A POSICAO DE LEFT E TOP PARA MOVER O CONTEUDO
+ DENTRO DO CONTAINER. LEFT E TOP CONSIDERAM A POSICAO DO CANTO SUPERIOR ESQUERDO PARA O ALINHAMENTO,
+ UTILIZANDO 50% EM CADA O CONTEUDO NAO FICARA CENTRALIZADO, PARA FINALIZAR A CENTRALIZACAO UTILIZO 
+ O TRANSFORM TRANSLATE COM -%50 -%50 QUE ASSIM O CONTEUDO FICARA CENTRALIZADO */
+
+    }
+  </style>
+</head>
+
+<body>
+  <section id="container">
+    <article id="conteudo">
+
+    </article>
+  </section>
+</body>
+
+</html>
